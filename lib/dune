@@ -1,0 +1,4 @@
+(library
+ (name conway)
+ (modules world world_disp mouse)
+ (libraries graphics))
