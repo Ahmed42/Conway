@@ -102,6 +102,9 @@ let run steps =
       | 'p' | 'P' -> loop world Paused mouse_down last_update_time steps
       | 'r' | 'R' -> loop world Running mouse_down last_update_time steps
       | 'q' | 'Q' -> ()
+      | 'c' | 'C' -> 
+                      let new_world = ConwayWorld.create 50 Dead in
+                      loop new_world Paused false 0.0 steps
       | _ -> 
         begin 
           print_char key; 
